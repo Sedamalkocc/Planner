@@ -1,21 +1,25 @@
 :root {
-  --primary-clr: #79a3f9;
+  --primary-clr: #446b0d;
   --secondry-clr: #646a7a;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 /* nice scroll bar */
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f5f5f5;
   border-radius: 50px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary-clr);
   border-radius: 50px;
@@ -30,6 +34,7 @@ body {
   padding-bottom: 30px;
   background-color: #e2e1dc;
 }
+
 .container {
   position: relative;
   width: 1200px;
@@ -42,10 +47,12 @@ body {
   border-radius: 10px;
   background-color: var(--secondry-clr);
 }
+
 .left {
   width: 60%;
   padding: 20px;
 }
+
 .calendar {
   position: relative;
   width: 100%;
@@ -58,6 +65,7 @@ body {
   border-radius: 5px;
   background-color: #fff;
 }
+
 /* set after behind the main element */
 .calendar::before,
 .calendar::after {
@@ -71,11 +79,13 @@ body {
   background-color: #d3d4d6d7;
   transform: translateY(-50%);
 }
+
 .calendar::before {
   height: 94%;
   left: calc(100% + 12px);
   background-color: rgb(153, 153, 153);
 }
+
 .calendar .month {
   width: 100%;
   height: 150px;
@@ -87,14 +97,17 @@ body {
   font-weight: 500;
   text-transform: capitalize;
 }
+
 .calendar .month .prev,
 .calendar .month .next {
   cursor: pointer;
 }
+
 .calendar .month .prev:hover,
 .calendar .month .next:hover {
   color: var(--primary-clr);
 }
+
 .calendar .weekdays {
   width: 100%;
   height: 100px;
@@ -106,6 +119,7 @@ body {
   font-weight: 500;
   text-transform: capitalize;
 }
+
 .weekdays div {
   width: 14.28%;
   height: 100%;
@@ -113,6 +127,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .calendar .days {
   width: 100%;
   display: flex;
@@ -123,6 +138,7 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 .calendar .days .day {
   width: 14.28%;
   height: 90px;
@@ -133,15 +149,19 @@ body {
   color: var(--primary-clr);
   border: 1px solid #f5f5f5;
 }
+
 .calendar .days .day:nth-child(7n + 1) {
   border-left: 2px solid #f5f5f5;
 }
+
 .calendar .days .day:nth-child(7n) {
   border-right: 2px solid #f5f5f5;
 }
+
 .calendar .days .day:nth-child(-n + 7) {
   border-top: 2px solid #f5f5f5;
 }
+
 .calendar .days .day:nth-child(n + 29) {
   border-bottom: 2px solid #f5f5f5;
 }
@@ -150,16 +170,19 @@ body {
   color: #fff;
   background-color: var(--primary-clr);
 }
+
 .calendar .days .prev-date,
 .calendar .days .next-date {
   color: #b3b3b3;
 }
+
 .calendar .days .active {
   position: relative;
   font-size: 2rem;
   color: #fff;
   background-color: var(--primary-clr);
 }
+
 .calendar .days .active::before {
   content: "";
   position: absolute;
@@ -169,12 +192,15 @@ body {
   height: 100%;
   box-shadow: 0 0 10px 2px var(--primary-clr);
 }
+
 .calendar .days .today {
   font-size: 2rem;
 }
+
 .calendar .days .event {
   position: relative;
 }
+
 .calendar .days .event::after {
   content: "";
   position: absolute;
@@ -186,16 +212,20 @@ body {
   transform: translateX(-50%);
   background-color: var(--primary-clr);
 }
+
 .calendar .days .day:hover.event::after {
   background-color: #fff;
 }
+
 .calendar .days .active.event::after {
   background-color: #fff;
   bottom: 20%;
 }
+
 .calendar .days .active.event {
   padding-bottom: 10px;
 }
+
 .calendar .goto-today {
   width: 100%;
   height: 50px;
@@ -207,6 +237,7 @@ body {
   margin-bottom: 20px;
   color: var(--primary-clr);
 }
+
 .calendar .goto-today .goto {
   display: flex;
   align-items: center;
@@ -214,6 +245,7 @@ body {
   overflow: hidden;
   border: 1px solid var(--primary-clr);
 }
+
 .calendar .goto-today .goto input {
   width: 100%;
   height: 30px;
@@ -224,6 +256,7 @@ body {
   color: var(--primary-clr);
   border-radius: 5px;
 }
+
 .calendar .goto-today button {
   padding: 5px 10px;
   border: 1px solid var(--primary-clr);
@@ -232,15 +265,18 @@ body {
   cursor: pointer;
   color: var(--primary-clr);
 }
+
 .calendar .goto-today button:hover {
   color: #fff;
   background-color: var(--primary-clr);
 }
+
 .calendar .goto-today .goto button {
   border: none;
   border-left: 1px solid var(--primary-clr);
   border-radius: 0;
 }
+
 .container .right {
   position: relative;
   width: 40%;
@@ -262,15 +298,18 @@ body {
   margin-bottom: 20px;
   text-transform: capitalize;
 }
+
 .right .today-date .event-day {
   font-size: 2rem;
   font-weight: 500;
 }
+
 .right .today-date .event-date {
   font-size: 1rem;
   font-weight: 400;
   color: #878895;
 }
+
 .events {
   width: 100%;
   height: 100%;
@@ -281,6 +320,7 @@ body {
   flex-direction: column;
   padding-left: 4px;
 }
+
 .events .event {
   position: relative;
   width: 95%;
@@ -295,30 +335,37 @@ body {
   background: linear-gradient(90deg, #5b617a, transparent);
   cursor: pointer;
 }
+
 /* even event */
 .events .event:nth-child(even) {
   background: transparent;
 }
+
 .events .event:hover {
   background: linear-gradient(90deg, var(--primary-clr), transparent);
 }
+
 .events .event .title {
   display: flex;
   align-items: center;
   pointer-events: none;
 }
+
 .events .event .title .event-title {
   font-size: 1rem;
   font-weight: 400;
   margin-left: 20px;
 }
+
 .events .event i {
   color: var(--primary-clr);
   font-size: 0.5rem;
 }
+
 .events .event:hover i {
   color: #fff;
 }
+
 .events .event .event-time {
   font-size: 0.8rem;
   font-weight: 400;
@@ -326,9 +373,11 @@ body {
   margin-left: 15px;
   pointer-events: none;
 }
+
 .events .event:hover .event-time {
   color: #fff;
 }
+
 /* add tick in event after */
 .events .event::after {
   content: "✓";
@@ -344,9 +393,11 @@ body {
   color: var(--primary-clr);
   transform: translateY(-50%);
 }
+
 .events .event:hover::after {
   display: flex;
 }
+
 .add-event {
   position: absolute;
   bottom: 30px;
@@ -364,12 +415,15 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+
 .add-event:hover {
   opacity: 1;
 }
+
 .add-event i {
   pointer-events: none;
 }
+
 .events .no-event {
   width: 100%;
   height: 100%;
@@ -380,6 +434,7 @@ body {
   font-weight: 500;
   color: #878895;
 }
+
 .add-event-wrapper {
   position: absolute;
   bottom: 100px;
@@ -392,9 +447,11 @@ body {
   transform: translateX(-50%);
   transition: max-height 0.5s ease;
 }
+
 .add-event-wrapper.active {
   max-height: 300px;
 }
+
 .add-event-header {
   width: 100%;
   height: 50px;
@@ -405,17 +462,21 @@ body {
   color: #373c4f;
   border-bottom: 1px solid #f5f5f5;
 }
+
 .add-event-header .close {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 .add-event-header .close:hover {
   color: var(--primary-clr);
 }
+
 .add-event-header .title {
   font-size: 1.2rem;
   font-weight: 500;
 }
+
 .add-event-body {
   width: 100%;
   height: 100%;
@@ -424,6 +485,7 @@ body {
   gap: 5px;
   padding: 20px;
 }
+
 .add-event-body .add-event-input {
   width: 100%;
   height: 40px;
@@ -432,6 +494,7 @@ body {
   justify-content: space-between;
   gap: 10px;
 }
+
 .add-event-body .add-event-input input {
   width: 100%;
   height: 100%;
@@ -443,21 +506,26 @@ body {
   font-weight: 400;
   color: #373c4f;
 }
+
 .add-event-body .add-event-input input::placeholder {
   color: #a5a5a5;
 }
+
 .add-event-body .add-event-input input:focus {
   border-bottom: 1px solid var(--primary-clr);
 }
+
 .add-event-body .add-event-input input:focus::placeholder {
   color: var(--primary-clr);
 }
+
 .add-event-footer {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
+
 .add-event-footer .add-event-btn {
   height: 40px;
   font-size: 1rem;
@@ -471,6 +539,7 @@ body {
   padding: 5px 10px;
   border: 1px solid var(--primary-clr);
 }
+
 .add-event-footer .add-event-btn:hover {
   background-color: transparent;
   color: var(--primary-clr);
@@ -483,21 +552,25 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
   }
+
   .container {
     min-height: 100vh;
     flex-direction: column;
     border-radius: 0;
   }
+
   .container .left {
     width: 100%;
     height: 100%;
     padding: 20px 0;
   }
+
   .container .right {
     width: 100%;
     height: 100%;
     padding: 20px 0;
   }
+
   .calendar::before,
   .calendar::after {
     top: 100%;
@@ -507,32 +580,40 @@ body {
     border-radius: 0 0 5px 5px;
     transform: translateX(-50%);
   }
+
   .calendar::before {
     width: 94%;
     top: calc(100% + 12px);
   }
+
   .events {
     padding-bottom: 340px;
   }
+
   .add-event-wrapper {
     bottom: 100px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .calendar .month {
     height: 75px;
   }
+
   .calendar .weekdays {
     height: 50px;
   }
+
   .calendar .days .day {
     height: 40px;
     font-size: 0.8rem;
   }
+
   .calendar .days .day.active,
   .calendar .days .day.today {
     font-size: 1rem;
   }
+
   .right .today-date {
     padding: 20px;
   }
@@ -549,93 +630,107 @@ body {
   color: #fff;
   background-color: var(--primary-clr);
 }
+
 .credits a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
+
 .credits a:hover {
   text-decoration: underline;
 }
 
-  .nav{
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
-    z-index: 100;
-}
-.nav-logo p{
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+  z-index: 100;
 }
 
-.link:hover, .active{
-    border-bottom: 2px solid #fff;
-}
-.nav-button .btn{
-    width: 130px;
-    height: 40px;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s ease;
-}
-.btn:hover{
-    background: rgba(255, 255, 255, 0.3);
+.nav-logo p {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
 }
 
-.btn.white-btn{
-    background: rgba(255, 255, 255, 0.7);
+.link:hover,
+.active {
+  border-bottom: 2px solid #fff;
 }
-.btn.btn.white-btn:hover{
-    background: rgba(255, 255, 255, 0.5);
+
+.nav-button .btn {
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
 }
-.nav-menu-btn{
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn.white-btn {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.white-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu-btn {
   display: none;
 }
-@media only screen and (max-width: 786px){
-  .nav-button{
-      display: none;
+
+@media only screen and (max-width: 786px) {
+  .nav-button {
+    display: none;
   }
-  .nav-menu.responsive{
-      top: 100px;
+
+  .nav-menu.responsive {
+    top: 100px;
   }
-  .nav-menu{
-      position: absolute;
-      top: -800px;
-      display: flex;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.2);
-      width: 100%;
-      height: 90vh;
-      backdrop-filter: blur(20px);
-      transition: .3s;
+
+  .nav-menu {
+    position: absolute;
+    top: -800px;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 90vh;
+    backdrop-filter: blur(20px);
+    transition: .3s;
   }
-  
-  .nav-menu-btn{
-      display: block;
+
+  .nav-menu-btn {
+    display: block;
   }
-  .nav-menu-btn i{
-      font-size: 25px;
-      color: #fff;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      cursor: pointer;
-      transition: .3s;
+
+  .nav-menu-btn i {
+    font-size: 25px;
+    color: #fff;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
   }
-  .nav-menu-btn i:hover{
-      background: rgba(255, 255, 255, 0.15);
+
+  .nav-menu-btn i:hover {
+    background: rgba(255, 255, 255, 0.15);
   }
 }
+
 h1 {
   margin: 0;
 }
@@ -664,6 +759,7 @@ select {
   padding: 0;
   margin: 0 0 0 12px;
 }
+
 .input-field option {
   font-family: "Francois One";
   color: #fff;
@@ -711,7 +807,7 @@ select {
 
 .alarm-add-new h1 {
   width: 500px;
-  
+
 }
 
 .alarm-delete {
@@ -754,7 +850,7 @@ select {
 #alarm-hours:focus,
 #alarm-minutes:focus {
   color: #000;
-  background-color:var(--secondry-clr);
+  background-color: var(--secondry-clr);
 }
 
 #alarm-title {
@@ -828,62 +924,73 @@ select {
 }
 
 @-webkit-keyframes bell-animation {
+
   0%,
   100% {
-      -webkit-transform: translateX(0%);
-      transform: translateX(0%);
-      -webkit-transform-origin: 50% 50%;
-      transform-origin: 50% 50%;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
+
   15% {
-      -webkit-transform: translateX(-30px) rotate(6deg);
-      transform: translateX(-30px) rotate(6deg);
+    -webkit-transform: translateX(-30px) rotate(6deg);
+    transform: translateX(-30px) rotate(6deg);
   }
+
   30% {
-      -webkit-transform: translateX(15px) rotate(-6deg);
-      transform: translateX(15px) rotate(-6deg);
+    -webkit-transform: translateX(15px) rotate(-6deg);
+    transform: translateX(15px) rotate(-6deg);
   }
+
   45% {
-      -webkit-transform: translateX(-15px) rotate(3.6deg);
-      transform: translateX(-15px) rotate(3.6deg);
+    -webkit-transform: translateX(-15px) rotate(3.6deg);
+    transform: translateX(-15px) rotate(3.6deg);
   }
+
   60% {
-      -webkit-transform: translateX(9px) rotate(-2.4deg);
-      transform: translateX(9px) rotate(-2.4deg);
+    -webkit-transform: translateX(9px) rotate(-2.4deg);
+    transform: translateX(9px) rotate(-2.4deg);
   }
+
   75% {
-      -webkit-transform: translateX(-6px) rotate(1.2deg);
-      transform: translateX(-6px) rotate(1.2deg);
+    -webkit-transform: translateX(-6px) rotate(1.2deg);
+    transform: translateX(-6px) rotate(1.2deg);
   }
 }
 
 @keyframes bell-animation {
+
   0%,
   100% {
-      -webkit-transform: translateX(0%);
-      transform: translateX(0%);
-      -webkit-transform-origin: 50% 50%;
-      transform-origin: 50% 50%;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
+
   15% {
-      -webkit-transform: translateX(-30px) rotate(6deg);
-      transform: translateX(-30px) rotate(6deg);
+    -webkit-transform: translateX(-30px) rotate(6deg);
+    transform: translateX(-30px) rotate(6deg);
   }
+
   30% {
-      -webkit-transform: translateX(15px) rotate(-6deg);
-      transform: translateX(15px) rotate(-6deg);
+    -webkit-transform: translateX(15px) rotate(-6deg);
+    transform: translateX(15px) rotate(-6deg);
   }
+
   45% {
-      -webkit-transform: translateX(-15px) rotate(3.6deg);
-      transform: translateX(-15px) rotate(3.6deg);
+    -webkit-transform: translateX(-15px) rotate(3.6deg);
+    transform: translateX(-15px) rotate(3.6deg);
   }
+
   60% {
-      -webkit-transform: translateX(9px) rotate(-2.4deg);
-      transform: translateX(9px) rotate(-2.4deg);
+    -webkit-transform: translateX(9px) rotate(-2.4deg);
+    transform: translateX(9px) rotate(-2.4deg);
   }
+
   75% {
-      -webkit-transform: translateX(-6px) rotate(1.2deg);
-      transform: translateX(-6px) rotate(1.2deg);
+    -webkit-transform: translateX(-6px) rotate(1.2deg);
+    transform: translateX(-6px) rotate(1.2deg);
   }
 }
-
